@@ -80,7 +80,9 @@ Não copie as fórmulas do PDF sem conferir:
 Mantenha sempre a versão "como no artigo" e a versão corrigida lado a lado, para podermos comparar:
 
 - Teste de DeLong e intervalos de confiança entre as 10 divisões.
-- Rede construída só com o conjunto de treino (o artigo usa todas as empresas, o que vaza informação do teste).
+- Rede construída só com o conjunto de treino. O artigo parece montar a rede com todas as empresas antes de separar o
+  teste e não explica como pontuar uma empresa nova. A rede usa só os índices financeiros, não o default, então não é
+  vazamento do rótulo; o problema é que o cenário não corresponde a uma plataforma real.
 - Louvain com pesos de similaridade (1/d ou exp(-d)) em vez de distância.
 
 ## Reprodutibilidade

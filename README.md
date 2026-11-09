@@ -20,12 +20,14 @@ Nós vamos replicar esses resultados, corrigir alguns pontos do método e, se de
 
 ## Grupo
 
-| Integrante | Código | Apresentação |
-|---|---|---|
-| A: _nome_ | Dados, distância e MST | Contexto P2P e dados |
-| B: _nome_ | Medidas de rede e Louvain | Conceitos preliminares |
-| C: _nome_ | Modelos, métricas e replicação | Método e resultados |
-| D: _nome_ | DeLong, correções e extensões | Análise crítica e contribuição |
+| Integrante | Seções do artigo (releitura) |
+|---|---|
+| Lucas Marin | 1, 2.1 e 2.2: introdução, modelos de crédito e métricas de desempenho |
+| Giovani | 2.3, 2.4 e 2.5: distância, MST e medidas de rede |
+| Lucas Battisti | 3: resultados |
+| Gustavo Franco | 4: conclusão |
+
+A contribuição é feita por todos nós em conjunto. A divisão da apresentação ainda será definida.
 
 ## Datas
 
