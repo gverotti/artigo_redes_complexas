@@ -27,6 +27,9 @@ venv/
 *.fls
 *.fdb_latexmk
 
+# Anotações locais de cada um
+*.local.md
+
 # Sistema
 .DS_Store
 Thumbs.db

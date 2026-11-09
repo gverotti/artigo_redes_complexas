@@ -54,6 +54,7 @@ O cronograma completo está em [CRONOGRAMA.md](CRONOGRAMA.md).
 ```
 ├── README.md
 ├── CRONOGRAMA.md        cronograma e checklist de cada semana
+├── requirements.txt     bibliotecas Python
 ├── data/                bases de dados (fora do Git, ver data/README.md)
 ├── src/                 scripts e notebooks
 ├── results/             figuras e tabelas geradas pelo código
