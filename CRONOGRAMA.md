@@ -1,67 +1,67 @@
 # Cronograma
 
-**Prazo final: quarta, 02/12/2026, até 18h** (slides em PDF). Apresentações em 03 e 04/12 — ordem sorteada,
-então todos precisam estar prontos desde o primeiro dia.
+Nosso prazo final é **quarta-feira, 02/12/2026, até as 18h**, quando entregamos os slides em PDF. As apresentações
+são nos dias 03 e 04/12 e a ordem é sorteada na hora, então precisamos estar prontos desde o primeiro dia.
 
-Marque `[x]` conforme as tarefas forem concluídas (o GitHub mostra as caixas como checklist).
+Vamos marcando `[x]` conforme terminamos cada tarefa.
 
 ---
 
-## Semana 1 — Base (09–15/11)
+## Semana 1: base (09 a 15/11)
 
-- [ ] Reunião de kickoff: dividir papéis e preencher os nomes no [README](README.md#grupo)
-- [ ] Todos leem o artigo inteiro
+- [ ] Reunião inicial: dividir os papéis e colocar os nomes no [README](README.md#grupo)
+- [ ] Todos nós lemos o artigo inteiro
 - [ ] Confirmar com a professora que o artigo foi aprovado
-- [ ] Baixar o Supplementary Material e documentar o conteúdo em `data/README.md`
-- [ ] Definir linguagem (R ou Python), de preferência a mesma do código original
-- [ ] Definir ferramenta e template dos slides
-- [ ] Todos com acesso ao repositório (clone + primeiro commit de teste)
+- [ ] Baixar o Supplementary Material e anotar o que tem nele em `data/README.md`
+- [ ] Escolher a linguagem (provavelmente Python, que já usamos nas aulas)
+- [ ] Escolher a ferramenta e o modelo dos slides
+- [ ] Todos com acesso ao repositório (clonar e fazer um commit de teste)
 
-## Semana 2 — Replicação (16–22/11)
+## Semana 2: replicação (16 a 22/11)
 
-> ⚠️ 20/11 (sexta) é feriado.
+Atenção: 20/11 (sexta) é feriado.
 
-- [ ] **A:** carregar os dados, matriz de distância euclidiana padronizada, MST (Kruskal)
-- [ ] **B:** grau, força e comunidades (Louvain) de cada nó; figura da MST colorida por default (Figura 1)
-- [ ] **C:** Logit, LDA, CART e SVM com 10 divisões aleatórias treino/teste; AUC, KS, Gini e acurácia
-- [ ] **Meta:** chegar perto da Tabela 2 (AUC da Logit ≈ 79,6 → 80,8)
-- [ ] **D:** rascunho dos slides de conceitos preliminares (MST, modularidade, ROC/AUC)
-- [ ] Reunião de fim de semana: cada um explica sua parte para os outros três
+- [ ] **A:** carregar os dados, montar a matriz de distância euclidiana padronizada e a MST
+- [ ] **B:** calcular grau, força e comunidades (Louvain) de cada empresa e refazer a Figura 1 (MST colorida por default)
+- [ ] **C:** rodar Logit, LDA, CART e SVM com 10 divisões aleatórias de treino e teste e calcular AUC, KS, Gini e acurácia
+- [ ] Meta da semana: chegar perto da Tabela 2 (AUC da Logit de 79,6 para 80,8)
+- [ ] **D:** começar os slides de conceitos preliminares (MST, modularidade, curva ROC e AUC)
+- [ ] Reunião no fim da semana, em que cada um explica a sua parte para os outros três
 
-## Semana 3 — Contribuição + slides (23–29/11)
+## Semana 3: contribuição e slides (23 a 29/11)
 
 - [ ] Teste de DeLong e intervalos de confiança entre as 10 divisões
-- [ ] Rede construída **só com o treino** (versão sem vazamento de dados)
-- [ ] Louvain com similaridade (1/d ou exp(−d)) em vez de distância
-- [ ] *Opcional:* aplicar o método na Bondora
-- [ ] *Opcional:* trocar a MST por kNN ou rede por limiar; outras centralidades (betweenness, PageRank)
-- [ ] **27/11 (sex): primeira versão completa dos slides**
+- [ ] Rede construída só com o conjunto de treino, para evitar vazamento de dados
+- [ ] Louvain usando similaridade (1/d ou exp(-d)) no lugar da distância
+- [ ] *Opcional:* aplicar o método na base da Bondora
+- [ ] *Opcional:* trocar a MST por kNN ou por uma rede com limiar e testar outras centralidades (betweenness, PageRank)
+- [ ] **27/11 (sexta): primeira versão completa dos slides**
 - [ ] **28 ou 29/11: primeiro ensaio cronometrado (25 min)**
 
-## Semana 4 — Fechamento (30/11–02/12)
+## Semana 4: fechamento (30/11 a 02/12)
 
-- [ ] 30/11 (seg): ajustes a partir do ensaio
-- [ ] 01/12 (ter): segundo ensaio + gerar PDF + revisar slide de uso de IA
-- [ ] **02/12 (qua): enviar o PDF** — meta até 12h, limite 18h
-- [ ] 03–04/12: apresentação
+- [ ] 30/11 (segunda): ajustes depois do ensaio
+- [ ] 01/12 (terça): segundo ensaio, gerar o PDF e revisar tudo
+- [ ] **02/12 (quarta): enviar o PDF** (nossa meta é até o meio-dia; o limite é 18h)
+- [ ] 03 e 04/12: apresentação
 
 ---
 
-## Conteúdo obrigatório dos slides (enunciado)
+## O que os slides precisam ter (pelo enunciado)
 
-- [ ] Contextualização (problema, motivação, literatura)
-- [ ] Conceitos preliminares (tudo que não foi visto em aula)
-- [ ] Modelo/método formal (notação, hipóteses, relação com a disciplina)
+- [ ] Contextualização: problema, motivação e literatura
+- [ ] Conceitos preliminares: tudo o que não vimos em aula
+- [ ] Modelo ou método formal: notação, hipóteses e relação com a disciplina
 - [ ] Resultados principais
-- [ ] Análise crítica (limitações, hipóteses restritivas, extensões)
-- [ ] Contribuição própria do grupo
-- [ ] Slide final de uso de IA (ferramentas e finalidades)
+- [ ] Análise crítica: limitações, hipóteses restritivas e extensões
+- [ ] Nossa contribuição
+- [ ] Slide final exigido pelo enunciado (seção 1.6)
 
 ## Divisão da apresentação (25 min)
 
 | Integrante | Bloco | Tempo |
 |---|---|---|
-| A | Contexto P2P, motivação, dados | ~5 min |
-| B | Conceitos preliminares: distância, MST, Louvain/modularidade, ROC/AUC | ~7 min |
-| C | Método formal (pipeline) + resultados (Figura 1 e Tabela 2) | ~6 min |
-| D | Análise crítica + contribuição própria + slide de IA | ~7 min |
+| A | Contexto P2P, motivação e dados | ~5 min |
+| B | Conceitos preliminares: distância, MST, Louvain e modularidade, curva ROC e AUC | ~7 min |
+| C | Método formal e resultados (Figura 1 e Tabela 2) | ~6 min |
+| D | Análise crítica, nossa contribuição e slide final | ~7 min |
