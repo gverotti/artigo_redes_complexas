@@ -1,0 +1,26 @@
+name: Slides
+
+on:
+  push:
+    paths:
+      - "slides/**"
+      - ".github/workflows/slides.yml"
+  workflow_dispatch:
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compilar main.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: slides
+
+      - name: Disponibilizar o PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides-pdf
+          path: slides/main.pdf

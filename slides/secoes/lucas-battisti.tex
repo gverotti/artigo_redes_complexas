@@ -1,0 +1,37 @@
+% !TEX root = ../main.tex
+% Lucas Battisti: seção 3 do artigo
+
+\section{Resultados}
+
+\begin{frame}{A MST colorida por default}
+  % Colocar aqui a Figura 1 (ou a nossa versão dela, gerada em results/).
+  \begin{itemize}
+    \item Empresas em default concentradas nas folhas da árvore
+    \item Aparecem agrupadas, sugerindo comunidades
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Desempenho com e sem variáveis de rede}
+  % Gini recalculado como 2*AUC - 1: no artigo, KS e Gini estão trocados para CART e SVM.
+  \centering
+  \begin{tabular}{lcccccc}
+    \toprule
+    & \multicolumn{2}{c}{AUC} & \multicolumn{2}{c}{Gini} & \multicolumn{2}{c}{Acurácia} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    Modelo & Básico & Rede & Básico & Rede & Básico & Rede \\
+    \midrule
+    Logit & 79,63 & 80,79 & 59,26 & 61,59 & 90,19 & 90,10 \\
+    LDA   & 77,76 & 79,16 & 55,52 & 58,32 & 90,12 & 89,99 \\
+    CART  & 67,97 & 67,97 & 35,95 & 35,95 & 90,83 & 90,82 \\
+    SVM   & 76,81 & 77,65 & 53,62 & 55,30 & 92,44 & 92,22 \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{O que os resultados mostram}
+  \begin{itemize}
+    \item Ganho de cerca de 1 ponto de AUC em Logit, LDA e SVM
+    \item CART não muda
+    \item Acurácia praticamente igual nos dois cenários
+  \end{itemize}
+\end{frame}

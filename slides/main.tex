@@ -1,0 +1,49 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{figuras/}{../results/}}
+
+% Visual
+\definecolor{azul}{HTML}{1D4E89}
+\definecolor{vermelho}{HTML}{B03A2E}
+\setbeamercolor{structure}{fg=azul}
+\setbeamercolor{frametitle}{fg=azul}
+\setbeamercolor{title}{fg=azul}
+\setbeamercolor{alerted text}{fg=vermelho}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{footline}{%
+  \hfill\usebeamerfont{page number in head/foot}%
+  \insertframenumber\,/\,\inserttotalframenumber\hspace*{1em}\vskip0.6em}
+
+\title{Network Based Scoring Models to Improve\\Credit Risk Management in P2P Lending}
+\subtitle{Giudici, Hadji-Misheva \& Spelta (2019)}
+\author{Giovani \and Gustavo Franco \and Lucas Battisti \and Lucas Marin}
+\institute{Tópicos em Redes Complexas -- UFSCar}
+\date{Dezembro de 2026}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Roteiro}
+  \tableofcontents
+\end{frame}
+
+% Cada integrante edita apenas o próprio arquivo em secoes/.
+% O arquivo grupo.tex é editado em conjunto, combinando antes no grupo.
+\input{secoes/lucas-marin}
+\input{secoes/giovani}
+\input{secoes/lucas-battisti}
+\input{secoes/gustavo-franco}
+\input{secoes/grupo}
+
+\end{document}

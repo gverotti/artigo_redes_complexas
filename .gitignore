@@ -26,6 +26,10 @@ venv/
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.vrb
+*.synctex(busy)
+# O PDF dos slides é gerado pelo GitHub Actions; não versionamos para evitar conflitos
+slides/*.pdf
 
 # Anotações locais de cada um
 *.local.md

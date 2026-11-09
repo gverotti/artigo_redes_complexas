@@ -1,0 +1,17 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex (2x)",
+      "tools": ["pdflatex", "pdflatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"]
+    }
+  ],
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.view.pdf.viewer": "tab"
+}

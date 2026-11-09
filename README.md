@@ -60,7 +60,7 @@ O cronograma completo está em [CRONOGRAMA.md](CRONOGRAMA.md).
 ├── data/                bases de dados (fora do Git, ver data/README.md)
 ├── src/                 scripts e notebooks
 ├── results/             figuras e tabelas geradas pelo código
-├── slides/              apresentação e PDF final
+├── slides/              apresentação em LaTeX (ver docs/manual-slides.md)
 └── docs/
     ├── artigo/          PDF do artigo
     └── reunioes/        anotações das nossas reuniões

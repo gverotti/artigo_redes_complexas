@@ -1,0 +1,49 @@
+% !TEX root = ../main.tex
+% Giovani: seções 2.3, 2.4 e 2.5 do artigo
+
+\section{Rede de similaridade}
+
+\begin{frame}{Distância entre empresas}
+  % A Eq. (7) do artigo está sem a raiz e usa desvios-padrão no lugar das variâncias.
+  \[
+    d_{ij} = \sqrt{\sum_{t=1}^{T} \frac{(x_{it} - x_{jt})^2}{s_t^2}}
+  \]
+  \begin{itemize}
+    \item $s_t$: desvio-padrão da variável $t$
+    \item Distância pequena significa balanços parecidos
+    \item Matriz $D$ de dimensão $N \times N$, completa
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Minimal Spanning Tree}
+  \begin{itemize}
+    \item Árvore com $N-1$ arestas que liga todas as empresas com a menor soma de distâncias
+    \item Kruskal: ordenar as arestas pela distância e adicionar as que não formam ciclo
+    \item Equivale ao clustering hierárquico por single linkage
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Medidas de rede}
+  % As Eq. (8) e (9) do artigo precisam ser lidas sobre a adjacência da MST.
+  Seja $A$ a matriz de adjacência da MST.
+  \[
+    k_i = \sum_{j=1}^{N} A_{ij}
+    \qquad\qquad
+    s_i = \sum_{j=1}^{N} A_{ij}\, d_{ij}
+  \]
+  \begin{itemize}
+    \item Grau $k_i$: grau 1 indica uma folha da árvore
+    \item Força $s_i$: soma das distâncias até os vizinhos na árvore
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Comunidades: Louvain e modularidade}
+  % A Eq. (10) do artigo traz s_i s_i e delta(c_i, c_i); aqui está a forma correta.
+  \[
+    Q = \frac{1}{2m} \sum_{i,j} \left[ A_{ij} - \frac{s_i s_j}{2m} \right] \delta(c_i, c_j)
+  \]
+  \begin{itemize}
+    \item Compara o peso dentro das comunidades com o esperado ao acaso
+    \item Louvain: mover nós entre comunidades e agregar, repetindo enquanto $Q$ aumenta
+  \end{itemize}
+\end{frame}

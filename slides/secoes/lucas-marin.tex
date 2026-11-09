@@ -1,0 +1,55 @@
+% !TEX root = ../main.tex
+% Lucas Marin: seções 1, 2.1 e 2.2 do artigo (e a descrição dos dados no início da seção 2)
+
+\section{Contexto}
+
+\begin{frame}{Empréstimos P2P}
+  \begin{itemize}
+    \item O que é P2P lending: pessoas emprestam diretamente para pessoas ou PMEs, sem banco no meio
+    \item Por que cresceu: custo menor, uso de dados ``soft'', diretiva PSD2
+    \item Riscos: assimetria de informação, risco todo com o investidor, interdependência entre tomadores
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O que o artigo propõe}
+  \begin{itemize}
+    \item Usar a topologia de uma rede de similaridade entre empresas para melhorar o credit scoring
+    \item Onde se insere: avaliação de scoring em P2P e redes financeiras
+  \end{itemize}
+\end{frame}
+
+\section{Dados e modelos de crédito}
+
+\begin{frame}{Dados}
+  \begin{itemize}
+    \item 4.514 PMEs italianas (agência de rating modeFinance)
+    \item Índices financeiros de balanço e DRE, sem valores faltantes
+    \item 11\% das empresas em default
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Regressão logística}
+  % A Eq. (2) do artigo está sem o sinal negativo; aqui está a forma correta.
+  \[
+    \ln\frac{p_n}{1-p_n} = \alpha + \sum_{t=1}^{T} \beta_t x_{nt}
+    \qquad\Longrightarrow\qquad
+    p_n = \frac{1}{1 + \exp\!\big(-(\alpha + \sum_{t=1}^{T} \beta_t x_{nt})\big)}
+  \]
+\end{frame}
+
+\begin{frame}{Outros classificadores}
+  \begin{itemize}
+    \item \textbf{LDA:} classes normais com covariância comum; regra de decisão linear
+    \item \textbf{CART:} partições binárias recursivas que maximizam a pureza dos nós
+    \item \textbf{SVM:} hiperplano de margem máxima entre as classes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Como medimos o desempenho}
+  \begin{itemize}
+    \item TPR $= \frac{TP}{TP+FN}$ \quad FPR $= \frac{FP}{FP+TN}$
+    \item Curva ROC (TPR contra FPR) e AUC
+    \item Gini $= 2\cdot\text{AUC} - 1$ e estatística KS
+    \item Validação: 10 divisões aleatórias treino/teste, média das métricas
+  \end{itemize}
+\end{frame}
